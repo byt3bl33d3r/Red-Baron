@@ -9,6 +9,7 @@ module "create_a_record" {
   source = "./modules/aws/create-dns-record"
 
   domain = "domain.com"
+  count = 2
   type = "A"
   records = {
     "domain.com" = "192.168.0.1"
